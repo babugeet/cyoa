@@ -8,6 +8,8 @@ import (
 func main() {
 
 	storycontent := utils.ParseJson("/workspaces/cyoa/story.json")
-	storyserver.StartStory(storycontent)
-
+	storyserver.StartStory(storycontent, "intro")
+	for {
+		storyserver.ShowStoryAccordingtoUserInput(storycontent)
+	}
 }
